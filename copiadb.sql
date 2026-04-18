@@ -1,0 +1,76 @@
+/*M!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19-11.4.7-MariaDB, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: dptivo
+-- ------------------------------------------------------
+-- Server version	11.4.7-MariaDB-0ubuntu0.25.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
+
+--
+-- Table structure for table `visitas`
+--
+
+DROP TABLE IF EXISTS `visitas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `visitas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_completo` varchar(100) NOT NULL,
+  `persona_visitada` varchar(100) NOT NULL,
+  `fecha` date DEFAULT curdate(),
+  `hora_entrada` time DEFAULT current_timestamp(),
+  `hora_salida` time DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `visitas`
+--
+
+LOCK TABLES `visitas` WRITE;
+/*!40000 ALTER TABLE `visitas` DISABLE KEYS */;
+INSERT INTO `visitas` VALUES
+(1,'faty','pista',NULL,'07:40:00','00:00:00','2026-04-18 13:40:00'),
+(3,'sam','gym','2026-04-18','07:45:17','12:14:03','2026-04-18 13:45:17'),
+(4,'wendy','pista','2026-04-18','07:47:34','12:22:23','2026-04-18 13:47:34'),
+(5,'estela','gym','2026-04-18','07:50:21','12:21:22','2026-04-18 13:50:21'),
+(6,'faty','pista','2026-04-18','08:17:28',NULL,'2026-04-18 14:17:28'),
+(7,'testHTML','gym','2026-04-18','08:17:41',NULL,'2026-04-18 14:17:41'),
+(8,'HTML','registro','2026-04-18','08:23:31',NULL,'2026-04-18 14:23:31'),
+(9,'Dingo','pista','2026-04-18','08:49:15',NULL,'2026-04-18 14:49:15'),
+(11,'ada','Pista Atletismo','2026-04-18','09:45:34',NULL,'2026-04-18 15:45:34'),
+(14,'While','gym','2026-04-18','11:25:01',NULL,'2026-04-18 17:25:01'),
+(16,'Antonio','registro','2026-04-18','12:41:41','12:42:17','2026-04-18 18:41:41'),
+(17,'Kev','gym','2026-04-18','12:52:24',NULL,'2026-04-18 18:52:24'),
+(19,'kev2','gym','2026-04-18','13:02:48',NULL,'2026-04-18 19:02:48'),
+(20,'faty','pista','2026-04-18','13:02:58',NULL,'2026-04-18 19:02:58'),
+(21,'test','gym','2026-04-18','14:40:23',NULL,'2026-04-18 20:40:23'),
+(23,'faty','test','2026-04-18','14:48:48',NULL,'2026-04-18 20:48:48'),
+(24,'faty','pista','2026-04-18','14:49:16',NULL,'2026-04-18 20:49:16'),
+(26,'testAlert','pista','2026-04-18','14:55:13',NULL,'2026-04-18 20:55:13'),
+(27,'testAlert2','gym','2026-04-18','14:57:43',NULL,'2026-04-18 20:57:43');
+/*!40000 ALTER TABLE `visitas` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
+
+-- Dump completed on 2026-04-18 15:44:18
